@@ -1,0 +1,5 @@
+name: ALogin
+version: 1.0.1
+author: azefgh456
+main: fr.acore.bungeecord.ALogin
+depends: ['ACoreBungeeCordAPI']

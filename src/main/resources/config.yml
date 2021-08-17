@@ -1,0 +1,36 @@
+license: ""
+
+premium:
+  forceLogin: false
+  autoLoginMessage: "&6Connection réussi"
+
+auth:
+  timeToAuth: 30000
+  kickToLongMessage: "Trop long"
+
+login:
+  message: "/login <mdp>"
+  maxAtent: 3
+  failAtentMessage: "Mot de passe incorect"
+  kickMaxAtentMessage: "Le nombre de t'entative maximum est ataint"
+  successMessage: "Connection reussi"
+  
+register:
+  message: "/register <mdp> <mdp>"
+  failedNotSameMessage: "Les deux mots de passe doivent être identique"
+  minLenght: 6
+  failToShortMessage: "Le mots de pass est trop cour"
+  deprecatedPassword:
+  - "motdepass"
+  - "test4561237890"
+  deprecatedMessage: "Ce mot de passe est interdit"
+  successMessage: "Inscription réussi"
+  
+changepass:
+  message: "/changepassword <old> <new> <new>"
+  deniedPremiumAccount: "Tu es premium tu n'as pas de mots de passe"
+  failWrongPass: "Mot de passe inccorect"
+  failToShort: "Mot de passe trop cour"
+  failNotSame: "Les mots de passe ne sont pas identique"
+  failSameBefore: "Tu ne peut pas re metre le meme mots de passe"
+  success: "Mot de passe changé avec success"
