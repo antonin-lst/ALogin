@@ -21,8 +21,8 @@ register:
   minLenght: 6
   failToShortMessage: "Le mots de pass est trop cour"
   deprecatedPassword:
-  - "motdepass"
-  - "test4561237890"
+    - "motdepass"
+    - "test4561237890"
   deprecatedMessage: "Ce mot de passe est interdit"
   successMessage: "Inscription réussi"
   

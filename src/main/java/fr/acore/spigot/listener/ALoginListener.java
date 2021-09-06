@@ -35,8 +35,7 @@ public class ALoginListener implements Listener {
     public void onPlayerJoinEvent(PlayerJoinEvent event) {
         CorePlayer<?> player = loginManager.getManager(PlayerManager.class).getOnlinePlayer(event.getPlayer().getUniqueId());
 
-        System.out.println("OnJoinInfo : " + player.getPlayer().getName());
-        System.out.println("La mm : " + player.getUuid());
+        System.out.println("Debug : " + player.isPremium());
 
         event.getPlayer().getInventory().clear();
         auth((CorePlayer<?>) player);

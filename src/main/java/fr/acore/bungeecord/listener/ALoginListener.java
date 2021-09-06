@@ -31,10 +31,12 @@ public class ALoginListener implements Listener {
         PendingConnection connection = event.getConnection();
         String username = connection.getName();
         String uuid = PremiumUtils.generateOfflineId(username).toString();
+        System.out.println("username : " + username);
+        System.out.println("OfflineUuid : " + uuid);
         AuthUser authUser = null;
         if(loginManager.getAuthUserFactory().contain("uuid = ?", uuid)){
             authUser = new AuthUser(loginManager.getAuthUserFactory().selectFirst(new QueryConstraint(QueryConstraintType.WHERE, "uuid = ?", uuid)), connection);
-            System.out.println("Debug : " + authUser.isPremium());
+            System.out.println("isPremium : " + authUser.isPremium());
             loginManager.addAuthUser(authUser);
             if(authUser.isPremium()) authUser.getConnection().setOnlineMode(true);
         }else{
@@ -67,9 +69,9 @@ public class ALoginListener implements Listener {
         }
 
         user.setPlayer(player);
-		/*System.out.println("PlayerName : " + event.getPlayer().getName());
+		System.out.println("PlayerName : " + event.getPlayer().getName());
 		System.out.println("PremiumUUID : " + event.getPlayer().getUniqueId());
-		System.out.println("CrackedUUID : " + PremiumUtils.generateOfflineId(event.getPlayer().getName()));*/
+		System.out.println("CrackedUUID : " + PremiumUtils.generateOfflineId(event.getPlayer().getName()));
     }
 
     @EventHandler
