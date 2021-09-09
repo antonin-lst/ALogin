@@ -5,6 +5,7 @@ import java.util.Arrays;
 import fr.acore.spigot.api.command.CommandStats;
 import fr.acore.spigot.api.command.sender.ICommandSender;
 import fr.acore.spigot.api.player.impl.CorePlayer;
+import fr.acore.spigot.commands.sender.CorePlayerSender;
 import fr.acore.spigot.manager.ALoginManager;
 import fr.acore.spigot.task.AuthTask;
 import fr.acore.spigot.task.impl.RegisterAuthTask;
@@ -25,7 +26,7 @@ public class CommandRegister extends APlayerCommand {
 
 
 	@Override
-	public CommandStats performAPlayerCommand(ICommandSender<CorePlayer<?>> sender, String... args) {
+	public CommandStats performAPlayerCommand(CorePlayerSender sender, String... args) {
 		Player player = sender.getSender().getPlayer();
 		if(manager.containPlayer(player)) {
 			
